@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一届“创新青年”创业大赛</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<!--常传勇-->
+<body onload="time(),qiehuan()">
+    <script>
+        function time(){
+            var mubiao = new Date("2020/5/1 00:00:00");
+            var xianzai = new Date();
+            var resultdate = mubiao.getTime() - xianzai.getTime();
+            var day = Math.floor(resultdate / (1000 * 60 * 60 * 24));
+            resultdate -= day * (1000 * 60 * 60 * 24);
+            var hour = Math.floor(resultdate / (1000 * 60 * 60));
+            resultdate -= hour * (1000 * 60 * 60);
+            var minute = Math.floor(resultdate / (1000 * 60));
+            resultdate -= minute * (1000 * 60);
+            var second = Math.floor(resultdate / 1000);
+            document.getElementById("b1").innerHTML = day;
+            document.getElementById("b2").innerHTML = hour;
+            document.getElementById("b3").innerHTML = minute;
+            document.getElementById("b4").innerHTML = second;
+        }
+        setInterval("time()",1000)
+        var imgs = ["./img/横幅1.jpg","./img/横幅2.jpg","./img/横幅3.jpg"];
+        var index = 0;
+        function qiehuan(){
+            document.getElementById("img").src = imgs[index];
+            index++;
+            if(index > (imgs.length-1)) index = 0;
+        }
+        setInterval("qiehuan()",5000)
+        function huantupian(i){
+            document.getElementById('img').src = imgs[i];
+        }
+        function lianxi(){
+            alert("主页中有我们的联系方式哦")
+        }
+    </script>
+    <div class="daohang" >
+        <a href="./index.html" class="a_banner"><span class="a1">首页</span><br>Home</a>
+        <a href="./大赛简介.html" class="a_banner"><span class="a1">大赛简介</span><br>Introduction</a>
+        <a href="./我要报名.html" class="a_banner"><span class="a1">我要报名</span><br>Sign up</a>
+        <a href="./登录.html" class="a_banner"><span class="a1">登录</span><br>Login</a>
+        <a href="#" onclick="lianxi()" class="a_banner"><span class="a1">联系我们</span><br>Contact</a>
+    </div>
+    <div class="hengfu"><img id="img" class="banner_img" src="./img/横幅1.jpg" alt="横幅"></div>
+    <div id="huakuaizu">
+        <a onmouseover="huantupian(0)"><div id="huakia1" class="huakuai"></div></a>
+        <a onmouseover="huantupian(1)"><div id="huakia2" class="huakuai"></div></a>
+        <a onmouseover="huantupian(2)"><div id="huakia3" class="huakuai"></div></a>
+    </div>
+<!--    <img class="bankuai" src="./img/板块内容.jpg" alt="板块内容">-->
+    <div class="guize">
+        <a class="guize_a" href="./规则查询.html">规则查询</a>
+        <br><a class="guize_a" href="./比赛结果.html">结果查询</a>
+    </div>
+    <div class="xinwen">
+<!--        <a href="#"><div class="gengduo"></div></a>-->
+        <div class="xinwen1" id="xinwen2">
+            <img src="./img/新闻1.png" alt="新闻图片">
+            <a class="xinwen_a" href="./新闻/第一篇新闻.html">第八届创新创业大赛大中小企业融通专业赛（新松专场）圆满收官</a>
+        </div>
+        <div class="xinwen1" id="xinwen3">
+            <img src="./img/新闻2.png" alt="新闻图片">
+            <a class="xinwen_a" href="./新闻/第二篇新闻.html">第八届创新创业大赛大中小企业融通专业赛（新东方专场）成功举办</a>
+        </div>
+        <div class="xinwen1" id="xinwen4">
+            <img style="margin-top: 35px" src="./img/新闻3.png" alt="新闻图片">
+            <a class="xinwen_a" href="./新闻/第三篇新闻.html">新东方双创大赛启幕 开放教育资源促合作</a>
+        </div>
+        <div class="xinwen1" id="xinwen5">
+            <img style="margin-top: 35px" src="./img/新闻4.png" alt="新闻图片">
+            <a class="xinwen_a" href="./新闻/第四篇新闻.html">第八届创新创业大赛大中小企业融通专业赛（华为专场）圆满落幕！</a>
+        </div>
+    </div>
+
+
+    <!--孙方-->
+    <div class="p1">
+        <ul>
+            <li>
+                <a href="./公告/大赛公告1.html" target="blank" >第八届中国创新创业大赛大中小企业融通专业赛（新东方专场）复赛、决赛通知</a>
+                    <span class="gonggao"><br>2019年12月11日</span><br>
+            </li>
+            <li>
+                <a href="./公告/大赛公告2.html" target="blank">关于第八届中国创新创业大赛大中小企业融通专业赛（美年大健康专场）报名延期的通知</a>
+                    <span class="gonggao"><br>2019年12月06日</span><br>
+            </li>
+            <li>
+                <a href="./公告/大赛公告3.html" target="blank">第八届中国创新创业大赛大中小企业融通专业赛（新东方专场）复赛企业名单公示</a>
+                <span class="gonggao"><br>2019年12月17日</span><br>
+            </li>
+            <li>
+                <a href="./公告/大赛公告4.html" target="blank">第八届中国创新创业大赛大中小企业融通专业赛（新松专场）复赛、决赛通知 </a>
+                <span class="gonggao"><br>2019年12月16日</span><br>
+            </li>
+            <li>
+                <a href="./公告/大赛公告5.html" target="blank">第八届中国创新创业大赛互联网行业总决赛获奖及优秀企业名单公示   </a>
+                <span class="gonggao"><br>2019年11月22日</span><br>
+            </li>
+        </ul>   
+    </div>
+    <div class="fengcai">
+        <div id="p1">
+            <img class="fengcai1" id="a1" src="./img/大赛的风采 (1).png">
+            <img class="fengcai1" id="a2" src="./img/大赛的风采 (2).png">
+            <img class="fengcai1" id="a3" src="./img/大赛的风采 (3).png">
+            <img class="fengcai1" id="a4" src="./img/大赛的风采 (4).png">
+        </div>
+        <div id="p2">
+            <img class="fengcai2" id="a5" src="./img/大赛的风采 (5).png">
+            <img class="fengcai2" id="a6" src="./img/大赛的风采 (6).png">
+            <img class="fengcai2" id="a7" src="./img/大赛的风采 (7).png">
+            <img class="fengcai2" id="a8" src="./img/大赛的风采 (8).png">
+        </div>
+    </div>   
+    <div class="lianxi">
+        <div class="lanxi1" id="p">
+            北京市西城区三里河二区
+        </div>
+        <div class="lanxi1">
+            010-88656219
+        </div>
+        <div class="lanxi1">
+            bmzx@ctp.gov.cn
+        </div>
+        <div class="lanxi1">
+            微信二维码：
+            <img src="./img/二维码1.png" style="width: 60px; height: 60px;">
+            官方二维码：
+            <img src="./img/二维码2.png" style="width: 60px;height: 60px;">
+        </div>
+    </div>
+
+
+
+<!--    常传勇-->
+    <div class="time">
+        <div class="time1" id="b1"></div>
+        <div class="time1" id="b2"></div>
+        <div class="time1" id="b3"></div>
+        <div class="time1" id="b4"></div>
+    </div>
+</body>
+</html>
